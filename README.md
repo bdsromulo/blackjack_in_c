@@ -1,9 +1,60 @@
-# blackjack_in_c
+# 🃏 Blackjack in C (Vinte e Um)
 
-PT:
+<div align="center">
+  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" />
+  <img src="https://img.shields.io/badge/Estrutura_de_Dados-UTFPR-green?style=for-the-badge" />
+</div>
 
-Projeto para a matéria de Estruturas de Dados I,do Professor Minetto, utilizando a linguagem C básica e mecanismos da matéria para reproduzir o jogo de Blackjack (Vinte e Um) em terminal. O jogo consiste no saque aleatório de cartas, empilhadas e embaralhadas, que somadas, têm que resultar no valor de 21 ou próximo. As cartas tem que ser estrategicamente sacadas de maneira a não estourar o teto de 21 pontos, senão o jogador perde. No display das cartas já sacadas, há um cálculo de probabilidade de saque para estourar, resultar em pontuação alta ou resultar em Blackjack, para que assim o player possa decidir se quer manter travar a pontuação ou continuar jogando. Junto ao jogador, há 2 bots programados para realizar jogadas de acordo com as chances estatísticas para fechar em 21 ou com pontuação alta, similar ao do jogador, de acordo com as cartas que ainda restam no bolo.
+<br>
 
-O arquivo é dividido entre os arquivos de funções "functions.h" e "functions.c" e o arquivo de jogo. As funções são declaradas no intuito de realizar as operações de atribuir valores às cartas, movimentar e embaralhar pilhas, embaralhamento. cálculo de probabilidades e suboperações necessárias para as citadas anteriormente. No arquivo "vinte_e_um.c", é onde se dá a organização e execução do jogo, incluindo critérios de probabilidade para execução dos bots, definição de ganhador esorteio de início e de cartas.
+Projeto para a matéria de **Estruturas de Dados I**, ministrada pelo Professor Minetto (UTFPR), utilizando a linguagem C básica e os mecanismos aprendidos para reproduzir o clássico jogo de **Blackjack (Vinte e Um)** diretamente no terminal.
 
-Para execução do jogo, tendo todos os arquivos na mesma pasta, basta executar o script em vinte_e_um.c, e divirta-se
+---
+
+## 🎲 Como Funciona o Jogo
+
+O jogo consiste no saque aleatório de cartas (empilhadas e embaralhadas) que, somadas, devem resultar no valor de **21** ou o mais próximo possível disso. 
+As cartas devem ser sacadas estrategicamente para não estourar o limite de 21 pontos (o famoso *Bust*), caso contrário, o jogador perde.
+
+### 🤖 Inteligência e Bots
+Junto ao jogador, há **2 bots** programados para realizar jogadas de acordo com as chances estatísticas de fechar em 21 ou obter uma pontuação alta (semelhante às decisões de um jogador humano), com base nas cartas que ainda restam no baralho.
+
+### 📊 Estatísticas em Tempo Real
+A cada saque de cartas, o jogo exibe na tela um cálculo matemático de probabilidade para auxiliar na sua decisão (manter a pontuação ou continuar jogando):
+- **Chance de Estourar (Bust)**
+- **Chance de Pontuação Alta (19 ou 20)**
+- **Chance de Blackjack (21 exato)**
+
+---
+
+## 📁 Estrutura do Código
+
+Para manter a organização e a clareza, o projeto foi modularizado em diferentes arquivos:
+
+- `functions.h` e `functions.c`: Contêm as declarações e implementações das operações principais, como atribuir valores às cartas, criar, movimentar e embaralhar pilhas (usando listas encadeadas), além do cálculo matemático de probabilidades.
+- `vinte_e_um.c`: Arquivo principal onde ocorre o loop, a organização e a execução do jogo. Inclui os critérios de tomada de decisão dos bots, controle de rodadas, sorteio inicial e definição do ganhador.
+
+---
+
+## 🚀 Como Executar
+
+Para rodar o jogo, você precisará de um compilador de C (como o `gcc`) instalado em sua máquina.
+
+1. Faça o clone do repositório ou baixe os arquivos.
+2. Certifique-se de que todos os arquivos (`vinte_e_um.c`, `functions.c` e `functions.h`) estejam na mesma pasta.
+3. Abra o terminal na pasta do projeto e compile os arquivos com o comando:
+   ```bash
+   gcc vinte_e_um.c functions.c -o blackjack
+   ```
+4. Execute o jogo recém compilado:
+   - No Windows: `blackjack.exe` ou `.\blackjack.exe`
+   - No Linux/Mac: `./blackjack`
+
+**Divirta-se jogando!**
+
+---
+
+### 👨‍💻 Autor
+
+- **Rômulo Barbosa da Silva**
+- RA: 2306409 - CSF20 - UTFPR
